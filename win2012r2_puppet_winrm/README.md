@@ -16,7 +16,7 @@ This Vagrantfile creates an AWS instance and configures it with WinRM. This is u
 
 Windows Update is also run, using [this Powershell toolkit](https://social.technet.microsoft.com/wiki/contents/articles/32424.biztalk-server-installation-powershell-toolkit.aspx).
 
-**Note:** If you are provisioning this AMI from scratch, this step usually takes time if there are many updates. The update auto-restarts the VM.
+**Note:** If you are provisioning this AMI from scratch, this step usually takes time if there are many updates. The update does not auto-restart the VM.
 
 ### WinRM Configuration
 
