@@ -37,4 +37,4 @@ $windows_username = "Administrator"
 # min 4 GB RAM needed for BizTalk 2013. increase as necessary.
 $aws_instance_type = "t2.medium"
 # Names of the machines as visible in AWS Console
-$ec2_instances = ["biztalk-server"]
+$ec2_instances = ["win2012r2_winrm_puppet"]
