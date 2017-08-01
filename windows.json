@@ -12,6 +12,7 @@
     "communicator": "winrm",
     "ssh_private_ip": true,
     "winrm_username": "Administrator",
+    "user_data_file": "win.txt",
     "ami_name": "bitztalkServerHarishaminame",
     "ami_description": "bitztalkServerHarishamidesc",
     "run_tags": {
