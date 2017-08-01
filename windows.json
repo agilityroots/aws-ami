@@ -1,0 +1,33 @@
+{
+  "description": "Amazon AMI's",
+  "builders": [{
+    "type": "amazon-ebs",
+    "name": "WindowsImage",
+    "region": "ap-south-1",
+    "vpc_id": "vpc-f4f2079d",
+    "subnet_id": "subnet-00a7904a",
+    "security_group_id": "sg-b422e8dc",
+    "source_ami": "ami-e7afd688",
+    "instance_type": "t2.micro",
+    "communicator": "winrm",
+    "ssh_private_ip": true,
+    "winrm_username": "Administrator",
+    "ami_name": "bitztalkServerHarishaminame",
+    "ami_description": "bitztalkServerHarishamidesc",
+    "run_tags": {
+      "Name": "bitztalkServerHarish"
+    },
+    "tags": {
+      "Name": "bitztalkServerHarishtagname"
+    }
+  }
+],
+  "provisioners": [
+    {
+       "type": "windows-shell",
+       "inline": [
+           "cd C:\\",
+	   "mkdir hardening" ]
+    }
+  ]
+}
