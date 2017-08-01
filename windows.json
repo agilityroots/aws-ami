@@ -2,33 +2,32 @@
   "description": "Amazon AMI's",
   "builders": [{
     "type": "amazon-ebs",
-    "name": "WindowsImage",
+    "name": "aroots",
     "region": "ap-south-1",
     "vpc_id": "vpc-f4f2079d",
-    "subnet_id": "subnet-00a7904a",
+    "subnet_id": "subnet-1c49bc75",
     "security_group_id": "sg-b422e8dc",
     "source_ami": "ami-e7afd688",
-    "instance_type": "t2.micro",
+    "instance_type": "t2.medium",
+    "user_data_file": "winrm.txt",
     "communicator": "winrm",
-    "ssh_private_ip": true,
     "winrm_username": "Administrator",
-    "user_data_file": "win.txt",
-    "ami_name": "bitztalkServerHarishaminame",
-    "ami_description": "bitztalkServerHarishamidesc",
+    "ami_name": "ami_name",
+    "ami_description": "ami_description",
     "run_tags": {
-      "Name": "bitztalkServerHarish"
+      "Name": "ami_name_harish_bts"
     },
     "tags": {
-      "Name": "bitztalkServerHarishtagname"
+      "Name": "HARISH"
     }
   }
 ],
   "provisioners": [
     {
-       "type": "windows-shell",
-       "inline": [
-           "cd C:\\",
-	   "mkdir hardening" ]
-    }
-  ]
+        "type": "powershell",
+        "inline": [
+            "dir c:\\"
+        ]
+      }
+]
 }
